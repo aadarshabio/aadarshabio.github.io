@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aadarsha Pokhrel | Biomedical Engineer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<style>
+  body {
+    font-family: sans-serif;
+    background: #fdfdfd;
+    color: #111;
+    overflow-x: hidden;
+  }
+
+  /* Floating social media bar */
+  .social-bar {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 50;
+  }
+  .social-bar a {
+    background-color: #000;
+    color: #fff;
+    padding: 0.6rem;
+    border-radius: 9999px;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  .social-bar a:hover { transform: scale(1.3); background-color: #333; }
+
+  /* Floating biomedical background */
+  .background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    overflow: hidden;
+  }
+  .molecule {
+    position: absolute;
+    color: rgba(200,200,200,0.2);
+    animation: floatXY linear infinite;
+  }
+  @keyframes floatXY {
+    0% { transform: translate(0px, 0px) rotate(0deg); }
+    50% { transform: translate(30px, -30px) rotate(180deg); }
+    100% { transform: translate(0px, 0px) rotate(360deg); }
+  }
+
+  /* Card hover and transition */
+  .card {
+    background: #ffffffcc;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+
+  /* Arrow rotation */
+  .rotate-180 { transform: rotate(180deg); }
+</style>
+</head>
+<body>
+
+<!-- Floating Biomedical Background -->
+<div class="background-animation"></div>
+
+<!-- Sticky Header -->
+<header class="sticky top-0 z-40 bg-white shadow-md">
+<nav class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <div class="text-2xl font-bold flex items-center gap-2">
+        
+    </div>
+    
+</nav>
+</header>
+
+<!-- About Section -->
+<section id="about" class="max-w-6xl mx-auto p-8 flex justify-center">
+  <!-- Card for About Me -->
+  <div class="p-6 flex flex-col items-center mb-6">
+    
+    <!-- Bigger Profile Picture in Center -->
+    <img src="aadarsha.jpg" alt="Aadarsha Pokhrel" 
+         class="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-gray-300 mb-4 transition-transform transform hover:scale-105">
+    <p class="text-center text-gray-700 max-w-l text-5xl font-bold">
+	Aadarsha Pokhrel
+    </p>
+    <p class="text-center text-gray-700 max-w-l text-2xl mt-4">
+      Biomedical engineer with hands-on experience in laboratory research and sensor-based hardware projects, specialized in Python-based embedded systems, experimental protocols with strong problem-solving and teamwork skills, eager to contribute to impactful projects that turn biological and engineering insights into practical solutions.
+    </p>
+    
+     <div class="flex gap-4 mt-4">
+      <!-- Email -->
+      <a href="mailto:AadarshaPokhrel@my.unt.edu" 
+         class="bg-black text-white w-12 h-12 flex justify-center items-center rounded-full hover:bg-gray-700 transition">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <!-- LinkedIn -->
+      <a href="https://linkedin.com/in/aadarsha-pokhrel/" target="_blank"
+         class="bg-black text-white w-12 h-12 flex justify-center items-center rounded-full hover:bg-gray-700 transition">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <!-- GitHub (optional) -->
+      <a href="https://github.com/aadarshabio" target="_blank"
+         class="bg-black text-white w-12 h-12 flex justify-center items-center rounded-full hover:bg-gray-700 transition">
+        <i class="fab fa-github"></i>
+      </a>
+     
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="max-w-6xl mx-auto p-8">
+<h2 class="text-3xl font-bold mb-4 flex items-center gap-2"><i class="fas fa-briefcase"></i> Experience</h2>
+
+<!-- ARM’s Laboratory Assistant -->
+<div class="card p-4 mb-4">
+    <div class="flex justify-between items-center cursor-pointer" onclick="toggleCard(this)">
+        <div class="flex items-center gap-3">
+            <!-- Circular Logo -->
+            <img src="https://images.seeklogo.com/logo-png/47/1/university-of-north-texas-logo-png_seeklogo-479554.png" alt="ARM's Lab Logo" class="w-12 h-12 rounded-full border border-gray-300">
+            <h3 class="font-semibold">ARM’s Laboratory Assistant</h3>
+        </div>
+        <i class="fas fa-chevron-down transition transform"></i>
+    </div>
+    <div class="hidden mt-2 text-gray-700">
+        <ul class="list-disc list-inside">
+            <li>Designing and prototyping mechanical components in AutoCAD and Fusion 360.</li>
+            <li>3D printing and assembly of hand-exoskeleton components.</li>
+            <li>Working with Arduino-based control systems and collaborating with researchers.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Chan’s Laboratory Assistant -->
+<div class="card p-4 mb-4">
+    <div class="flex justify-between items-center cursor-pointer" onclick="toggleCard(this)">
+        <div class="flex items-center gap-3">
+            <img src="https://images.seeklogo.com/logo-png/47/1/university-of-north-texas-logo-png_seeklogo-479554.png" alt="Chan Lab Logo" class="w-12 h-12 rounded-full border border-gray-300">
+            <h3 class="font-semibold">Chan’s Laboratory Assistant</h3>
+        </div>
+        <i class="fas fa-chevron-down transition transform"></i>
+    </div>
+    <div class="hidden mt-2 text-gray-700">
+        <ul class="list-disc list-inside">
+            <li>Experience with PCR, ligation, gel electrophoresis, and plasmid analysis.</li>
+            <li>Maintained experimental records using Benchling and improved workflow efficiency.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Biology Laboratory Assistant -->
+<div class="card p-4 mb-4">
+    <div class="flex justify-between items-center cursor-pointer" onclick="toggleCard(this)">
+        <div class="flex items-center gap-3">
+            <img src="caldwell.webp" alt="Caldwell Lab Logo" class="w-12 h-12 rounded-full border border-gray-300">
+            <h3 class="font-semibold">Biology Laboratory Assistant</h3>
+        </div>
+        <i class="fas fa-chevron-down transition transform"></i>
+    </div>
+    <div class="hidden mt-2 text-gray-700">
+        <ul class="list-disc list-inside">
+            <li>Prepared lab sessions, organized materials, and ensured safety protocols.</li>
+            <li>Assisted students during experiments and reinforced proper lab techniques.</li>
+        </ul>
+    </div>
+</div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="max-w-6xl mx-auto p-8">
+<h2 class="text-3xl font-bold mb-4 flex items-center gap-2"><i class="fas fa-project-diagram"></i> Projects</h2>
+
+<!-- Kozi.REST – AI Sleep Tracking Device -->
+<div class="card p-4 mb-4">
+    <div class="flex justify-between items-center cursor-pointer" onclick="toggleCard(this)">
+        <div class="flex items-center gap-3">
+            <!-- Circular Project Logo -->
+            <img src="kozi.png" alt="Kozi.REST Logo" class="w-12 h-12 rounded-full border border-gray-300">
+            <h3 class="font-semibold flex items-center gap-2">Kozi.REST – AI Sleep Tracking Device</h3>
+        </div>
+        <i class="fas fa-chevron-down transition transform"></i>
+    </div>
+    <div class="hidden mt-2 text-gray-700">
+        <ul class="list-disc list-inside mb-4">
+            <li>Built bedside system on Raspberry Pi 4 integrating CCS811 air-quality and ultrasonic sensors.</li>
+            <li>Full-stack pipeline: Python edge service, Node.js backend with MongoDB, and live Tailwind/Chart.js dashboard.</li>
+            <li>Implemented “one-tap” morning report with weather fusion, Gemini summaries, and ElevenLabs TTS.</li>
+        </ul>
+        <!-- Project Link Button -->
+        <a href="https://devpost.com/software/nindra" target="_blank" 
+           class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-700 transition">
+            Project Link
+        </a>
+    </div>
+</div>
+
+</section>
+
+<!-- Floating Social Media -->
+<div class="social-bar">
+    <a href="https://linkedin.com/in/aadarsha-pokhrel" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+</div>
+
+<script>
+function toggleCard(el) {
+    const content = el.nextElementSibling;
+    const arrow = el.querySelector('i.fas.fa-chevron-down');
+    content.classList.toggle('hidden');
+    arrow.classList.toggle('rotate-180');
+}
+
+// Floating biomedical icons
+const icons = ["fa-dna", "fa-microscope", "fa-vial", "fa-heartbeat", "fa-virus"];
+const container = document.querySelector(".background-animation");
+const totalElements = 50; // more elements for a fuller background
+
+for (let i = 0; i < totalElements; i++) {
+    const icon = document.createElement("i");
+    icon.classList.add("fas", icons[Math.floor(Math.random() * icons.length)], "molecule");
+
+    // Random initial position
+    icon.style.top = Math.random() * 100 + "%";
+    icon.style.left = Math.random() * 100 + "%";
+
+    // Random size
+    icon.style.fontSize = (1.5 + Math.random() * 2) + "rem";
+
+    // **Faster animation duration (10s – 20s)**
+    icon.style.animationDuration = (10 + Math.random() * 10) + "s";
+
+    container.appendChild(icon);
+}
+</script>
+
+</body>
+</html>
